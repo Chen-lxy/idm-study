@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <!--    连接池的配置-->
+  <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+    <property name="driverClassName">
+      <value>com.mysql.jdbc.Driver</value>
+    </property>
+    <property name="url">
+      <value>jdbc:mysql://127.0.0.1:3306/flowable?useUnicode=true&amp;characterEncoding=UTF-8
+      </value>
+    </property>
+    <property name="username">
+      <value>root</value>
+    </property>
+    <property name="password" value="root"/>
+  </bean>
+
+  <bean id="processEngineConfiguration" class="org.flowable.engine.impl.cfg.StandaloneProcessEngineConfiguration">
+    <!-- Database configurations -->
+    <property name="databaseSchemaUpdate" value="true"/>
+    <property name="dataSource" ref="dataSource"/>
+    <property name="databaseType" value="mysql"/>
+    <property name="processEngineLifecycleListener" ref="myProcessEngineListener"/>
+  </bean>
+  <bean id="myProcessEngineListener" class="com.chen.bpmn.MyProcessEngineListener"/>
+
+  <bean id="testA" class="com.chen.bpmn.TestA">
+  </bean>
+</beans>
