@@ -4,6 +4,7 @@ import org.flowable.engine.*;
 import org.junit.After;
 import org.junit.Test;
 
+import java.io.InputStream;
 import java.util.Map;
 
 public class ProcessEngineTest {
@@ -45,11 +46,11 @@ public class ProcessEngineTest {
         System.out.println(aDefault);
     }
 
-    @After
-    public void close(){
-        // 关闭流程引擎，使用flowable风格的配置文件需要手动关闭，如果是spring风格的会自动关闭
-        processEngine.close();
-    }
+//    @After
+//    public void close(){
+//        // 关闭流程引擎，使用flowable风格的配置文件需要手动关闭，如果是spring风格的会自动关闭
+//        processEngine.close();
+//    }
 
     @Test
     public void test(){
@@ -60,6 +61,43 @@ public class ProcessEngineTest {
         standaloneProcessEngineConfiguration.setJdbcUsername("root");
         standaloneProcessEngineConfiguration.setJdbcPassword("root");
         processEngine = standaloneProcessEngineConfiguration.buildProcessEngine();
+        System.out.println(processEngine);
+    }
+
+    @Test
+    public void getProcessEngine(){
+        InputStream inputStream = ProcessEngineTest
+                .class.getClassLoader().getResourceAsStream("flowable.cfg.xml");
+        ProcessEngine processEngine = ProcessEngineConfiguration
+                .createProcessEngineConfigurationFromInputStream(inputStream).buildProcessEngine();
+        System.out.println(processEngine);
+    }
+
+    @Test
+    public void getProcessEngine1(){
+        String beanName = "processEngineConfiguration1";
+        InputStream inputStream = ProcessEngineTest
+                .class.getClassLoader().getResourceAsStream("flowable.cfg.xml1");
+        ProcessEngine processEngine = ProcessEngineConfiguration
+                .createProcessEngineConfigurationFromInputStream(inputStream,beanName)
+                .buildProcessEngine();
+        System.out.println(processEngine);
+    }
+
+    @Test
+    public void getProcessEngine2(){
+        ProcessEngine processEngine = ProcessEngineConfiguration
+                .createProcessEngineConfigurationFromResourceDefault()
+                .buildProcessEngine();
+        System.out.println(processEngine);
+    }
+
+    @Test
+    public void getProcessEngine3(){
+        String resource = "flowable.cfg.xml";
+        ProcessEngine processEngine = ProcessEngineConfiguration
+                .createProcessEngineConfigurationFromResource(resource)
+                .buildProcessEngine();
         System.out.println(processEngine);
     }
 }

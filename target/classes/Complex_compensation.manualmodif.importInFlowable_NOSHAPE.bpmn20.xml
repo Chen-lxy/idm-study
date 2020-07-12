@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:flowable="http://flowable.org/bpmn"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI"
+             typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath"
+             targetNamespace="shareniu1">
+    <process id="Complex_compensation1" name="Complex_compensation" isExecutable="true">
+        <transaction id="SUB_PROCESS" name="SUB_PROCESS">
+            <startEvent id="SUBSTART"></startEvent>
+            <scriptTask id="SCRIPT_1" name="SCRIPT 1" scriptFormat="groovy" flowable:autoStoreVariables="false">
+                <script><![CDATA[stepNumber = 01
+println "stepNumber " + stepNumber
+println ""]]></script>
+            </scriptTask>
+            <scriptTask id="SCRIPT_2" name="SCRIPT 2" scriptFormat="groovy" flowable:autoStoreVariables="false">
+                <script><![CDATA[stepNumber = stepNumber + 10
+println "stepNumber " + stepNumber
+println ""]]></script>
+            </scriptTask>
+            <scriptTask id="SCRIPT_3" name="SCRIPT 3" scriptFormat="groovy" flowable:autoStoreVariables="false">
+                <script><![CDATA[stepNumber = stepNumber + 100
+println "stepNumber " + stepNumber
+println ""]]></script>
+            </scriptTask>
+            <scriptTask id="COMP_SCRIPT_11" name="COMP
+SCRIPT 11" isForCompensation="true" scriptFormat="groovy" flowable:autoStoreVariables="false">
+                <script><![CDATA[stepNumber = stepNumber - 1
+println "compensation 01: stepNumber = " + stepNumber
+println ""]]></script>
+            </scriptTask>
+            <endEvent id="END_CANCEL" name="END_CANCEL">
+                <cancelEventDefinition></cancelEventDefinition>
+            </endEvent>
+            <scriptTask id="COMP_SCRIPT_31" name="COMP
+SCRIPT 31" isForCompensation="true" scriptFormat="groovy" flowable:autoStoreVariables="false">
+                <script><![CDATA[stepNumber = stepNumber - 100
+println "compensation 03: stepNumber = " + stepNumber
+println ""]]></script>
+            </scriptTask>
+            <scriptTask id="COMP_SCRIPT_21" name="COMP
+SCRIPT 21" isForCompensation="true" scriptFormat="groovy" flowable:autoStoreVariables="false">
+                <script><![CDATA[stepNumber = stepNumber - 10
+println "compensation 02: stepNumber = " + stepNumber
+println ""]]></script>
+            </scriptTask>
+            <boundaryEvent id="ERROR_1" name="ERROR_1" attachedToRef="SCRIPT_1">
+                <errorEventDefinition></errorEventDefinition>
+            </boundaryEvent>
+            <boundaryEvent id="ERROR_2" name="ERROR_2" attachedToRef="SCRIPT_2">
+                <errorEventDefinition></errorEventDefinition>
+            </boundaryEvent>
+            <boundaryEvent id="ERROR_3" name="ERROR_3" attachedToRef="SCRIPT_3">
+                <errorEventDefinition></errorEventDefinition>
+            </boundaryEvent>
+            <boundaryEvent id="COMP_1" name="COMP_1" attachedToRef="SCRIPT_1" cancelActivity="false">
+                <compensateEventDefinition></compensateEventDefinition>
+            </boundaryEvent>
+            <boundaryEvent id="COMP_2" name="COMP_2" attachedToRef="SCRIPT_2" cancelActivity="false">
+                <compensateEventDefinition></compensateEventDefinition>
+            </boundaryEvent>
+            <boundaryEvent id="COMP_3" name="COMP_3" attachedToRef="SCRIPT_3" cancelActivity="false">
+                <compensateEventDefinition></compensateEventDefinition>
+            </boundaryEvent>
+            <sequenceFlow id="SUBSTART_TO_TASK1" sourceRef="SUBSTART" targetRef="SCRIPT_1"></sequenceFlow>
+            <sequenceFlow id="TASK1_TO_TASK2" sourceRef="SCRIPT_1" targetRef="SCRIPT_2"></sequenceFlow>
+            <sequenceFlow id="TASK2_TO_TASK3" sourceRef="SCRIPT_2" targetRef="SCRIPT_3"></sequenceFlow>
+            <sequenceFlow id="ERROR2_TO_SUBENDCANCEL" sourceRef="ERROR_2" targetRef="END_CANCEL"></sequenceFlow>
+            <sequenceFlow id="ERROR3_TO_SUBENDCANCEL" sourceRef="ERROR_3" targetRef="END_CANCEL"></sequenceFlow>
+            <sequenceFlow id="TASK3_TO_SUBENDCANCEL" sourceRef="SCRIPT_3" targetRef="END_CANCEL"></sequenceFlow>
+            <sequenceFlow id="ERROR1_TO_SUBENDCANCEL" sourceRef="ERROR_1" targetRef="END_CANCEL"></sequenceFlow>
+        </transaction>
+        <scriptTask id="SCRIPT_AFTER_CANCEL" name="SCRIPT
+AFTER CANCEL" scriptFormat="groovy" flowable:autoStoreVariables="false">
+            <script><![CDATA[println "Cancel with stepNumber = " + stepNumber
+println ""]]></script>
+        </scriptTask>
+        <startEvent id="START" name="START"></startEvent>
+        <endEvent id="END" name="END"></endEvent>
+        <boundaryEvent id="CANCEL" name="CANCEL" attachedToRef="SUB_PROCESS" cancelActivity="false">
+            <cancelEventDefinition></cancelEventDefinition>
+        </boundaryEvent>
+        <sequenceFlow id="SUBPROCESS_TO_END" sourceRef="SUB_PROCESS" targetRef="END"></sequenceFlow>
+        <sequenceFlow id="CANCEL_TO_TASKAFTERCANCEL" sourceRef="CANCEL" targetRef="SCRIPT_AFTER_CANCEL"></sequenceFlow>
+        <sequenceFlow id="TASKAFTERCANCEL_TO_END" sourceRef="SCRIPT_AFTER_CANCEL" targetRef="END"></sequenceFlow>
+        <sequenceFlow id="START_TO_SUBPROCESS" sourceRef="START" targetRef="SUB_PROCESS"></sequenceFlow>
+        <association id="COMP1_TO_COMPSCRIPT11" sourceRef="COMP_1" targetRef="COMP_SCRIPT_11"
+                     associationDirection="None"></association>
+        <association id="COMP2_TO_COMPSCRIPT21" sourceRef="COMP_2" targetRef="COMP_SCRIPT_21"
+                     associationDirection="None"></association>
+        <association id="COMP3_TO_COMPSCRIPT31" sourceRef="COMP_3" targetRef="COMP_SCRIPT_31"
+                     associationDirection="None"></association>
+    </process>
+    <bpmndi:BPMNDiagram id="BPMNDiagram_Complex_compensation">
+        <bpmndi:BPMNPlane bpmnElement="Complex_compensation" id="BPMNPlane_Complex_compensation">
+            <bpmndi:BPMNShape bpmnElement="SUB_PROCESS" id="BPMNShape_SUB_PROCESS" isExpanded="true">
+                <omgdc:Bounds height="372.0" width="608.0" x="145.0" y="10.0"></omgdc:Bounds>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="SUBSTART" id="BPMNShape_SUBSTART">
+                <omgdc:Bounds height="30.0" width="30.0" x="180.0" y="156.9015757812657"></omgdc:Bounds>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="SCRIPT_1" id="BPMNShape_SCRIPT_1">
+                <omgdc:Bounds height="80.0" width="100.0" x="253.78296659225043" y="131.9015757812657"></omgdc:Bounds>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="SCRIPT_2" id="BPMNShape_SCRIPT_2">
+                <omgdc:Bounds height="80.0" width="100.0" x="389.6" y="131.9015757812657"></omgdc:Bounds>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="SCRIPT_3" id="BPMNShape_SCRIPT_3">
+                <omgdc:Bounds height="80.0" width="100.0" x="520.0457051321063" y="131.9015757812657"></omgdc:Bounds>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="COMP_SCRIPT_11" id="BPMNShape_COMP_SCRIPT_11">
+                <omgdc:Bounds height="80.0" width="100.0" x="255.0" y="270.09842421873435"></omgdc:Bounds>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="END_CANCEL" id="BPMNShape_END_CANCEL">
+                <omgdc:Bounds height="28.0" width="28.0" x="653.2" y="41.901575781265706"></omgdc:Bounds>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="COMP_SCRIPT_31" id="BPMNShape_COMP_SCRIPT_31">
+                <omgdc:Bounds height="80.0" width="100.0" x="520.0457051321063" y="270.09842421873435"></omgdc:Bounds>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="COMP_SCRIPT_21" id="BPMNShape_COMP_SCRIPT_21">
+                <omgdc:Bounds height="80.0" width="100.0" x="395.5817380010493" y="270.09842421873435"></omgdc:Bounds>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="ERROR_1" id="BPMNShape_ERROR_1">
+                <omgdc:Bounds height="30.0" width="30.0" x="297.20747135855794" y="116.73488257222118"></omgdc:Bounds>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="ERROR_2" id="BPMNShape_ERROR_2">
+                <omgdc:Bounds height="30.0" width="30.0" x="430.5817380010493" y="116.63997221163655"></omgdc:Bounds>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="ERROR_3" id="BPMNShape_ERROR_3">
+                <omgdc:Bounds height="30.0" width="30.0" x="554.7552963680167" y="116.71361360842806"></omgdc:Bounds>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="COMP_1" id="BPMNShape_COMP_1">
+                <omgdc:Bounds height="30.0" width="30.0" x="287.56593318450086" y="197.52124441968448"></omgdc:Bounds>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="COMP_2" id="BPMNShape_COMP_2">
+                <omgdc:Bounds height="30.0" width="30.0" x="424.88015567350334" y="197.5216691854983"></omgdc:Bounds>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="COMP_3" id="BPMNShape_COMP_3">
+                <omgdc:Bounds height="30.0" width="30.0" x="555.0457051321063" y="197.5216691854983"></omgdc:Bounds>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="SCRIPT_AFTER_CANCEL" id="BPMNShape_SCRIPT_AFTER_CANCEL">
+                <omgdc:Bounds height="80.0" width="100.0" x="819.0" y="260.152487487604"></omgdc:Bounds>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="START" id="BPMNShape_START">
+                <omgdc:Bounds height="30.0" width="30.0" x="75.0" y="181.0"></omgdc:Bounds>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="END" id="BPMNShape_END">
+                <omgdc:Bounds height="28.0" width="28.0" x="855.0" y="182.0"></omgdc:Bounds>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="CANCEL" id="BPMNShape_CANCEL">
+                <omgdc:Bounds height="30.0" width="30.0" x="738.1392454223036" y="279.57314772874963"></omgdc:Bounds>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNEdge bpmnElement="ERROR2_TO_SUBENDCANCEL" id="BPMNEdge_ERROR2_TO_SUBENDCANCEL">
+                <omgdi:waypoint x="445.5817380010493" y="116.63997221163655"></omgdi:waypoint>
+                <omgdi:waypoint x="445.5817380010493" y="55.901575781265706"></omgdi:waypoint>
+                <omgdi:waypoint x="653.2" y="55.901575781265706"></omgdi:waypoint>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="TASKAFTERCANCEL_TO_END" id="BPMNEdge_TASKAFTERCANCEL_TO_END">
+                <omgdi:waypoint x="869.0" y="260.152487487604"></omgdi:waypoint>
+                <omgdi:waypoint x="869.0" y="209.9499341531502"></omgdi:waypoint>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="COMP1_TO_COMPSCRIPT11" id="BPMNEdge_COMP1_TO_COMPSCRIPT11">
+                <omgdi:waypoint x="303.19738863899613" y="227.45763002398036"></omgdi:waypoint>
+                <omgdi:waypoint x="305.0" y="270.09842421873435"></omgdi:waypoint>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="TASK3_TO_SUBENDCANCEL" id="BPMNEdge_TASK3_TO_SUBENDCANCEL">
+                <omgdi:waypoint x="619.9957051321062" y="171.9015757812657"></omgdi:waypoint>
+                <omgdi:waypoint x="667.2" y="171.9015757812657"></omgdi:waypoint>
+                <omgdi:waypoint x="667.2" y="69.85150784421793"></omgdi:waypoint>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="CANCEL_TO_TASKAFTERCANCEL" id="BPMNEdge_CANCEL_TO_TASKAFTERCANCEL">
+                <omgdi:waypoint x="768.0719634819501" y="295.29225546187774"></omgdi:waypoint>
+                <omgdi:waypoint x="818.9999999999997" y="297.74470938396973"></omgdi:waypoint>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="COMP2_TO_COMPSCRIPT21" id="BPMNEdge_COMP2_TO_COMPSCRIPT21">
+                <omgdi:waypoint x="444.8124363776165" y="247.11491185870997"></omgdi:waypoint>
+                <omgdi:waypoint x="445.5817380010493" y="270.09842421873435"></omgdi:waypoint>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="ERROR3_TO_SUBENDCANCEL" id="BPMNEdge_ERROR3_TO_SUBENDCANCEL">
+                <omgdi:waypoint x="569.6382417160008" y="116.71398926005325"></omgdi:waypoint>
+                <omgdi:waypoint x="569.1645171612123" y="55.901575781265706"></omgdi:waypoint>
+                <omgdi:waypoint x="653.2" y="55.901575781265706"></omgdi:waypoint>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="TASK2_TO_TASK3" id="BPMNEdge_TASK2_TO_TASK3">
+                <omgdi:waypoint x="489.55000000000007" y="171.9015757812657"></omgdi:waypoint>
+                <omgdi:waypoint x="520.0457051321063" y="171.9015757812657"></omgdi:waypoint>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="START_TO_SUBPROCESS" id="BPMNEdge_START_TO_SUBPROCESS">
+                <omgdi:waypoint x="104.94999985813836" y="196.0"></omgdi:waypoint>
+                <omgdi:waypoint x="145.0" y="196.0"></omgdi:waypoint>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="SUBPROCESS_TO_END" id="BPMNEdge_SUBPROCESS_TO_END">
+                <omgdi:waypoint x="752.9499999998984" y="196.0"></omgdi:waypoint>
+                <omgdi:waypoint x="855.0" y="196.0"></omgdi:waypoint>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="SUBSTART_TO_TASK1" id="BPMNEdge_SUBSTART_TO_TASK1">
+                <omgdi:waypoint x="209.94999845599676" y="171.9015757812657"></omgdi:waypoint>
+                <omgdi:waypoint x="253.78296659225043" y="171.9015757812657"></omgdi:waypoint>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="COMP3_TO_COMPSCRIPT31" id="BPMNEdge_COMP3_TO_COMPSCRIPT31">
+                <omgdi:waypoint x="570.0457051321063" y="227.4716672667942"></omgdi:waypoint>
+                <omgdi:waypoint x="570.0457051321063" y="270.09842421873435"></omgdi:waypoint>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="TASK1_TO_TASK2" id="BPMNEdge_TASK1_TO_TASK2">
+                <omgdi:waypoint x="353.7329665922505" y="171.9015757812657"></omgdi:waypoint>
+                <omgdi:waypoint x="389.59999999996637" y="171.9015757812657"></omgdi:waypoint>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="ERROR1_TO_SUBENDCANCEL" id="BPMNEdge_ERROR1_TO_SUBENDCANCEL">
+                <omgdi:waypoint x="312.20747135855794" y="116.73488257222118"></omgdi:waypoint>
+                <omgdi:waypoint x="312.20747135855794" y="55.901575781265706"></omgdi:waypoint>
+                <omgdi:waypoint x="653.2" y="55.901575781265706"></omgdi:waypoint>
+            </bpmndi:BPMNEdge>
+        </bpmndi:BPMNPlane>
+    </bpmndi:BPMNDiagram>
+</definitions>
