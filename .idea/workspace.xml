@@ -2,24 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="395a4f0a-9ca9-4042-a7e9-7b8fb4e752e3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chen/ch10/SpringDemo4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chen/ch8/MyTaskListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chen/ch9/GoupTaskListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chen/ch9/ServerTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chen/ch9/SpringDemo2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chen/ch9/SpringDemo3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chen/ch9/SpringDemo4Gateway.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/个人任务.bpmn20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/个人任务2.bpmn20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/个人任务3.bpmn20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/变量测试流程.bpmn20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/排他网关测试.bpmn20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/接收任务测试.bpmn20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/组任务.bpmn20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/组任务2.bpmn20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/chen/ch11/SpringDemo5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/历史数据篇.bpmn20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/chen/ch11/SpringDemo5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/历史数据篇.bpmn20.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/chen/ch8/MyProcessInstanceHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chen/ch8/MyProcessInstanceHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/chen/ch8/SpringDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chen/ch8/SpringDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chen/ch10/SpringDemo4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chen/ch10/SpringDemo4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/chen/ch10/SpringDemo4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chen/ch10/SpringDemo4.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -49,26 +38,12 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/chen/ch10/SpringDemo4.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/chen/ch11/SpringDemo5.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="94" selection-start-line="94" selection-end-line="105" selection-end-column="5" />
-              <folding>
-                <element signature="e#3138#3154#0" expanded="true" />
-                <element signature="e#3672#3688#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="536">
+              <caret line="78" column="9" selection-start-line="78" selection-start-column="9" selection-end-line="78" selection-end-column="9" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/变量测试流程.bpmn20.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="2" column="23" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="23" />
-            </state>
-          </provider>
-          <provider editor-type-id="com.intellij.jboss.jbpm.chart.editor.BpmnDesignerFileEditorProvider" />
         </entry>
       </file>
     </leaf>
@@ -118,6 +93,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/chen/ch9/ServerTask.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chen/ch9/SpringDemo4Gateway.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chen/ch10/SpringDemo4.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chen/ch11/SpringDemo5.java" />
       </list>
     </option>
   </component>
@@ -145,6 +121,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -183,32 +161,12 @@
               <item name="idm-study" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="chen" type="462c0819:PsiDirectoryNode" />
-              <item name="ch9" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="idm-study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="idm-study" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="chen" type="462c0819:PsiDirectoryNode" />
-              <item name="ch10" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="idm-study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="idm-study" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -226,15 +184,16 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\soft\IDEA2019\workspace\idm-study\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.chen.ch11" />
       <recent name="com.chen.ch10" />
       <recent name="com.chen.ch9" />
       <recent name="com.chen.ch8" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\soft\IDEA2019\workspace\idm-study\src\main\resources" />
     </key>
   </component>
@@ -250,81 +209,81 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SpringDemo4.queryVariable">
-    <configuration name="SpringDemo4.complete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.SpringDemo5.queryHistoryTaskInstance">
+    <configuration name="SpringDemo5.deploy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="idm-study" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.chen.ch10.*" />
+          <option name="PATTERN" value="com.chen.ch11.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.chen.ch10" />
-      <option name="MAIN_CLASS_NAME" value="com.chen.ch10.SpringDemo4" />
-      <option name="METHOD_NAME" value="complete" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SpringDemo4.deploy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="idm-study" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.chen.ch10.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.chen.ch10" />
-      <option name="MAIN_CLASS_NAME" value="com.chen.ch10.SpringDemo4" />
+      <option name="PACKAGE_NAME" value="com.chen.ch11" />
+      <option name="MAIN_CLASS_NAME" value="com.chen.ch11.SpringDemo5" />
       <option name="METHOD_NAME" value="deploy" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpringDemo4.queryVariable" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SpringDemo5.queryHiostoryProcessInstance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="idm-study" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.chen.ch10.*" />
+          <option name="PATTERN" value="com.chen.ch11.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.chen.ch10" />
-      <option name="MAIN_CLASS_NAME" value="com.chen.ch10.SpringDemo4" />
-      <option name="METHOD_NAME" value="queryVariable" />
+      <option name="PACKAGE_NAME" value="com.chen.ch11" />
+      <option name="MAIN_CLASS_NAME" value="com.chen.ch11.SpringDemo5" />
+      <option name="METHOD_NAME" value="queryHiostoryProcessInstance" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpringDemo4.setVariable" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SpringDemo5.queryHistoryActivityInstance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="idm-study" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.chen.ch10.*" />
+          <option name="PATTERN" value="com.chen.ch11.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.chen.ch10" />
-      <option name="MAIN_CLASS_NAME" value="com.chen.ch10.SpringDemo4" />
-      <option name="METHOD_NAME" value="setVariable" />
+      <option name="PACKAGE_NAME" value="com.chen.ch11" />
+      <option name="MAIN_CLASS_NAME" value="com.chen.ch11.SpringDemo5" />
+      <option name="METHOD_NAME" value="queryHistoryActivityInstance" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpringDemo4.startProcess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SpringDemo5.queryHistoryTaskInstance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="idm-study" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.chen.ch10.*" />
+          <option name="PATTERN" value="com.chen.ch11.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.chen.ch10" />
-      <option name="MAIN_CLASS_NAME" value="com.chen.ch10.SpringDemo4" />
+      <option name="PACKAGE_NAME" value="com.chen.ch11" />
+      <option name="MAIN_CLASS_NAME" value="com.chen.ch11.SpringDemo5" />
+      <option name="METHOD_NAME" value="queryHistoryTaskInstance" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringDemo5.startProcess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="idm-study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chen.ch11.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.chen.ch11" />
+      <option name="MAIN_CLASS_NAME" value="com.chen.ch11.SpringDemo5" />
       <option name="METHOD_NAME" value="startProcess" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -333,11 +292,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SpringDemo4.queryVariable" />
-        <item itemvalue="JUnit.SpringDemo4.complete" />
-        <item itemvalue="JUnit.SpringDemo4.setVariable" />
-        <item itemvalue="JUnit.SpringDemo4.startProcess" />
-        <item itemvalue="JUnit.SpringDemo4.deploy" />
+        <item itemvalue="JUnit.SpringDemo5.queryHistoryTaskInstance" />
+        <item itemvalue="JUnit.SpringDemo5.queryHistoryActivityInstance" />
+        <item itemvalue="JUnit.SpringDemo5.queryHiostoryProcessInstance" />
+        <item itemvalue="JUnit.SpringDemo5.startProcess" />
+        <item itemvalue="JUnit.SpringDemo5.deploy" />
       </list>
     </recent_temporary>
   </component>
@@ -360,7 +319,8 @@
       <workItem from="1594652055612" duration="4915000" />
       <workItem from="1594737063402" duration="1720000" />
       <workItem from="1594820339507" duration="3511000" />
-      <workItem from="1594911821779" duration="3127000" />
+      <workItem from="1594911821779" duration="3350000" />
+      <workItem from="1595160109196" duration="4842000" />
     </task>
     <task id="LOCAL-00001" summary="flowable学习">
       <created>1593960493005</created>
@@ -383,47 +343,53 @@
       <option name="project" value="LOCAL" />
       <updated>1594550142227</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="flowable学习更新">
+      <created>1594916030311</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1594916030311</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SpringDemo4Gateway_startProcess - 2020.07.15 at 23h 10m 20s.xml">
-      <configuration name="SpringDemo4Gateway.startProcess" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SpringDemo4_deploy - 2020.07.16 at 23h 27m 54s.xml">
-      <configuration name="SpringDemo4.deploy" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SpringDemo4_startProcess - 2020.07.16 at 23h 28m 10s.xml">
-      <configuration name="SpringDemo4.startProcess" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SpringDemo4_startProcess - 2020.07.16 at 23h 28m 17s.xml">
-      <configuration name="SpringDemo4.startProcess" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SpringDemo4_setVariable - 2020.07.16 at 23h 30m 54s.xml">
-      <configuration name="SpringDemo4.setVariable" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SpringDemo4_setVariable - 2020.07.16 at 23h 32m 58s.xml">
-      <configuration name="SpringDemo4.setVariable" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SpringDemo4_startProcess - 2020.07.16 at 23h 41m 58s.xml">
-      <configuration name="SpringDemo4.startProcess" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SpringDemo4_setVariable - 2020.07.16 at 23h 42m 07s.xml">
-      <configuration name="SpringDemo4.setVariable" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SpringDemo4_complete - 2020.07.17 at 00h 02m 51s.xml">
-      <configuration name="SpringDemo4.complete" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="SpringDemo4_queryVariable - 2020.07.17 at 00h 07m 21s.xml">
       <configuration name="SpringDemo4.queryVariable" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="SpringDemo4_getHistoryVariable - 2020.07.19 at 21h 32m 41s.xml">
+      <configuration name="SpringDemo4.getHistoryVariable" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SpringDemo4_getHistoryVariable - 2020.07.19 at 21h 35m 11s.xml">
+      <configuration name="SpringDemo4.getHistoryVariable" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SpringDemo4_setTempVariable - 2020.07.19 at 21h 57m 41s.xml">
+      <configuration name="SpringDemo4.setTempVariable" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SpringDemo5_deploy - 2020.07.19 at 22h 48m 58s.xml">
+      <configuration name="SpringDemo5.deploy" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SpringDemo5_startProcess - 2020.07.19 at 22h 49m 08s.xml">
+      <configuration name="SpringDemo5.startProcess" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SpringDemo5_queryHiostoryProcessInstance - 2020.07.19 at 22h 53m 17s.xml">
+      <configuration name="SpringDemo5.queryHiostoryProcessInstance" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SpringDemo5_queryHiostoryProcessInstance - 2020.07.19 at 22h 53m 59s.xml">
+      <configuration name="SpringDemo5.queryHiostoryProcessInstance" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SpringDemo5_queryHistoryActivityInstance - 2020.07.19 at 23h 00m 19s.xml">
+      <configuration name="SpringDemo5.queryHistoryActivityInstance" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SpringDemo5_queryHistoryTaskInstance - 2020.07.19 at 23h 06m 09s.xml">
+      <configuration name="SpringDemo5.queryHistoryTaskInstance" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61011000" />
+    <option name="totallyTimeSpent" value="66076000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="716" y="0" width="828" height="882" extended-state="0" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info id="BPMN Editor" order="0" weight="0.32872927" />
       <window_info id="Image Layers" order="1" />
@@ -431,18 +397,18 @@
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Designer" order="5" />
-      <window_info content_ui="combo" id="Project" order="6" weight="0.38311687" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.27345845" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.47333333" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.47308782" />
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info anchor="bottom" id="Docker" order="2" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="5" />
+      <window_info anchor="bottom" id="Version Control" order="5" weight="0.3286119" />
       <window_info anchor="bottom" id="Spring" order="6" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" />
-      <window_info active="true" anchor="bottom" id="Run" order="9" visible="true" weight="0.42" />
+      <window_info anchor="bottom" id="Run" order="9" weight="0.70679885" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.39866668" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
@@ -458,40 +424,6 @@
       <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
     </layout>
-    <layout-to-restore>
-      <window_info id="BPMN Editor" order="0" weight="0.32872927" />
-      <window_info id="Image Layers" order="1" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="UI Designer" order="3" />
-      <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info id="Designer" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.38311687" />
-      <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.47466666" />
-      <window_info anchor="bottom" id="Terminal" order="1" />
-      <window_info anchor="bottom" id="Docker" order="2" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="5" />
-      <window_info anchor="bottom" id="Spring" order="6" />
-      <window_info anchor="bottom" id="Message" order="7" />
-      <window_info anchor="bottom" id="Find" order="8" />
-      <window_info anchor="bottom" id="Run" order="9" weight="0.35410765" />
-      <window_info anchor="bottom" id="Debug" order="10" weight="0.39914164" />
-      <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="13" />
-      <window_info anchor="right" id="Palette" order="0" />
-      <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="BPMNPalette" order="2" weight="0.32872927" />
-      <window_info anchor="right" id="Database" order="3" weight="0.32872927" />
-      <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Maven" order="6" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -499,7 +431,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="flowable学习" />
     <MESSAGE value="flowable学习1" />
-    <option name="LAST_COMMIT_MESSAGE" value="flowable学习1" />
+    <MESSAGE value="flowable学习更新" />
+    <option name="LAST_COMMIT_MESSAGE" value="flowable学习更新" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -599,8 +532,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/Complex_compensation.manualmodif.importInFlowable_NOSHAPE.bpmn20.xml">
-      <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="com.intellij.jboss.jbpm.chart.editor.BpmnDesignerFileEditorProvider" />
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/flowable.idm.cfg.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -627,12 +560,12 @@
       <provider selected="true" editor-type-id="bpmn-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/dataObject.bpmn20.xml">
+      <provider editor-type-id="com.intellij.jboss.jbpm.chart.editor.BpmnDesignerFileEditorProvider" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="4" column="23" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="23" />
         </state>
       </provider>
-      <provider editor-type-id="com.intellij.jboss.jbpm.chart.editor.BpmnDesignerFileEditorProvider" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
       <provider selected="true" editor-type-id="text-editor">
@@ -693,26 +626,26 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/接收任务测试.bpmn20.xml">
+      <provider editor-type-id="com.intellij.jboss.jbpm.chart.editor.BpmnDesignerFileEditorProvider" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="61" />
         </state>
       </provider>
-      <provider editor-type-id="com.intellij.jboss.jbpm.chart.editor.BpmnDesignerFileEditorProvider" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/个人任务.bpmn20.xml">
+      <provider editor-type-id="com.intellij.jboss.jbpm.chart.editor.BpmnDesignerFileEditorProvider" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="2" column="25" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="25" />
         </state>
       </provider>
-      <provider editor-type-id="com.intellij.jboss.jbpm.chart.editor.BpmnDesignerFileEditorProvider" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/个人任务2.bpmn20.xml">
+      <provider editor-type-id="com.intellij.jboss.jbpm.chart.editor.BpmnDesignerFileEditorProvider" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-630" />
       </provider>
-      <provider editor-type-id="com.intellij.jboss.jbpm.chart.editor.BpmnDesignerFileEditorProvider" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/chen/ch8/MyTaskListener.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -725,28 +658,28 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/个人任务3.bpmn20.xml">
+      <provider editor-type-id="com.intellij.jboss.jbpm.chart.editor.BpmnDesignerFileEditorProvider" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
         </state>
       </provider>
-      <provider editor-type-id="com.intellij.jboss.jbpm.chart.editor.BpmnDesignerFileEditorProvider" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/组任务.bpmn20.xml">
+      <provider editor-type-id="com.intellij.jboss.jbpm.chart.editor.BpmnDesignerFileEditorProvider" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="2" column="24" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="24" />
         </state>
       </provider>
-      <provider editor-type-id="com.intellij.jboss.jbpm.chart.editor.BpmnDesignerFileEditorProvider" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/组任务2.bpmn20.xml">
+      <provider editor-type-id="com.intellij.jboss.jbpm.chart.editor.BpmnDesignerFileEditorProvider" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="6" selection-start-line="6" selection-end-line="8" selection-end-column="26" />
         </state>
       </provider>
-      <provider editor-type-id="com.intellij.jboss.jbpm.chart.editor.BpmnDesignerFileEditorProvider" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/chen/ch9/GoupTaskListener.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -766,12 +699,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/服务任务.bpmn20.xml">
+      <provider editor-type-id="com.intellij.jboss.jbpm.chart.editor.BpmnDesignerFileEditorProvider" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="6" selection-start-line="6" selection-end-line="12" selection-end-column="18" />
         </state>
       </provider>
-      <provider editor-type-id="com.intellij.jboss.jbpm.chart.editor.BpmnDesignerFileEditorProvider" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/chen/ch9/ServerTask.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -791,12 +724,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/排他网关测试.bpmn20.xml">
+      <provider editor-type-id="com.intellij.jboss.jbpm.chart.editor.BpmnDesignerFileEditorProvider" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="750">
           <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
         </state>
       </provider>
-      <provider editor-type-id="com.intellij.jboss.jbpm.chart.editor.BpmnDesignerFileEditorProvider" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/chen/ch9/SpringDemo4Gateway.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -805,22 +738,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chen/ch10/SpringDemo4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="156" column="5" lean-forward="true" selection-start-line="139" selection-start-column="4" selection-end-line="156" selection-end-column="5" />
+          <folding>
+            <element signature="e#5153#5169#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/变量测试流程.bpmn20.xml">
+      <provider editor-type-id="com.intellij.jboss.jbpm.chart.editor.BpmnDesignerFileEditorProvider" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="2" column="23" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="23" />
         </state>
       </provider>
-      <provider editor-type-id="com.intellij.jboss.jbpm.chart.editor.BpmnDesignerFileEditorProvider" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chen/ch10/SpringDemo4.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chen/ch11/SpringDemo5.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="94" selection-start-line="94" selection-end-line="105" selection-end-column="5" />
-          <folding>
-            <element signature="e#3138#3154#0" expanded="true" />
-            <element signature="e#3672#3688#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="536">
+          <caret line="78" column="9" selection-start-line="78" selection-start-column="9" selection-end-line="78" selection-end-column="9" />
         </state>
       </provider>
     </entry>

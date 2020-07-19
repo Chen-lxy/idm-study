@@ -4,7 +4,9 @@ import org.flowable.engine.*;
 import org.flowable.engine.repository.Deployment;
 import org.flowable.engine.repository.DeploymentBuilder;
 import org.flowable.engine.runtime.ProcessInstance;
+import org.flowable.engine.runtime.ProcessInstanceBuilder;
 import org.flowable.task.api.Task;
+import org.flowable.variable.api.history.HistoricVariableInstance;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -116,6 +118,42 @@ public class SpringDemo4 {
         }
     }
 
+    @Test
+    public void getHistoryVariable(){
+        /** 查询历史变量
+         *  select RES.* from ACT_HI_VARINST RES order by RES.ID_ asc
+         */
+        List<HistoricVariableInstance> list = historyService
+                .createHistoricVariableInstanceQuery()
+                .processInstanceId("112501")
+                .list();
+        if (list != null && list.size() > 0){
+            for (HistoricVariableInstance hv : list){
+                System.out.println(hv.getCreateTime());
+                System.out.println(hv.getTaskId());
+                System.out.println(hv.getVariableName());
+                System.out.println(hv.getValue());
+            }
+        }
+    }
 
+    @Test
+    public void setTempVariable(){
+        /**
+         * 设置临时变量  不会存入数据库中
+         */
+        Map<String,Object> temp = new HashMap<String, Object>();
+        temp.put("a","a");
+        temp.put("b","b");
+        temp.put("c","c");
+        String key = "variable";
+        ProcessInstanceBuilder processInstanceBuilder = runtimeService.createProcessInstanceBuilder();
+        ProcessInstance processInstance = processInstanceBuilder.processDefinitionKey(key)
+                .name("test")
+                .transientVariables(temp)
+                .start();
+        System.out.println(processInstance.getId() + " >>>>>>>>>>>>>>>>>>>>>>>");
+
+    }
 
 }
